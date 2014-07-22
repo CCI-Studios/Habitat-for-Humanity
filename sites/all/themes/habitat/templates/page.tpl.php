@@ -73,7 +73,7 @@
 
             <?php print render($page['header']); ?>
 
-            <a href="/our-restore"><img src="<?php print base_path() . drupal_get_path('theme', 'habitat');?>/images/r_logo.png" alt="Habitat for Humanity ReStore" /></a>
+            <a class="restore_logo" href="/our-restore"><img src="<?php print base_path() . drupal_get_path('theme', 'habitat');?>/images/r_logo.png" alt="Habitat for Humanity ReStore" /></a>
         </div>
     </div>
 
