@@ -176,9 +176,9 @@
              </div>
 
             <div class="f_right">
-            	<a href="http://www.sarnialambtonchamber.com/" class="f_othr_logos1" target="_blank"><!--img src="<?php // print base_path() . drupal_get_path('theme', 'habitat');?>/images/f_othr_logos1.png"/ --></a><br />
-                <a href="http://www.habitat.ca/" class="f_othr_logos2" target="_blank" target="_blank"><!-- img src="<?php // print base_path() . drupal_get_path('theme', 'habitat');?>/images/f_othr_logos2.png"/ --></a><br />
-                <a href="/?q=node/6" class="f_othr_logos3"><!-- img src="<?php // print base_path() . drupal_get_path('theme', 'habitat');?>/images/f_othr_logos3.png"/ --></a>
+            	<a href="http://www.sarnialambtonchamber.com/" class="f_othr_logos1" target="_blank">Sarnia-Lambton Chamber of Commerce</a><br />
+                <a href="http://www.habitat.ca/" class="f_othr_logos2" target="_blank" target="_blank">Habitat for Humanity</a><br />
+                <a href="/?q=node/6" class="f_othr_logos3">Habitat for Humanity ReStore</a>
             </div>
 
         </div>
