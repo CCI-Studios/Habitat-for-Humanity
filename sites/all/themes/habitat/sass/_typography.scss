@@ -1,0 +1,24 @@
+@font-face
+{
+    font-family:"Clearface Gothic Bold";
+    src:url(/sites/all/themes/habitat/fonts/clearface.eot) format(embedded-opentype),
+        url(/sites/all/themes/habitat/fonts/clearface.woff) format(woff),
+        url(/sites/all/themes/habitat/fonts/clearface.ttf) format(truetype),
+        url(/sites/all/themes/habitat/fonts/clearface.svg#clearface) format(svg);
+}
+
+body
+{
+    font-family:"proxima-nova", sans-serif;
+    -webkit-font-smoothing:antialiased;
+}
+
+.clearface
+{
+    font-family:"Clearface Gothic Bold";
+}
+
+h1, h2, button, .gallery_list li
+{
+    @extend .clearface;
+}

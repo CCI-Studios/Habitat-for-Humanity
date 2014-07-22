@@ -1,0 +1,23 @@
+name = habitat Responsive Theme
+description = habitat responsive theme is a responsive theme its perfect for all sorts of corporate and small business websites: for support <b></b>
+core = 7.x
+
+
+stylesheets[all][] = css/screen.css
+scripts[] = js/slideshow.js
+
+regions[sidebar_first]  = First Sidebar
+regions[sidebar_second] = Second Sidebar
+regions[slideshow]      = Slideshow
+regions[mainmenu]       = Main Menu
+regions[header]         = Header
+regions[front_welcome]  = Front Welcome
+regions[top_first]      = First top
+regions[top_second]     = Second top
+regions[top_third]      = Third top
+regions[content]        = Content
+regions[content_top]    = Content Top
+regions[footer]         = Footer
+regions[footer_first]   = First Bottom
+regions[footer_second]  = Second Bottom
+regions[footer_third]   = Third Bottom
