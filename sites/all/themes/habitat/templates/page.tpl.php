@@ -120,8 +120,8 @@
                 </div>
             </div>
             <div style="margin-top:19px; padding:0; background:none !important; border:none !important;" class="sidebar">
-                <a href="/?q=node/12" style="margin:0; line-height:0; display:block;"><img style="max-width:100%; margin:0;" src="/sites/all/themes/habitat/images/don_img1.jpg"></a>
-                <a href="/?q=node/3" style="margin:0; line-height:0;"><img style="max-width:100%; margin:0;" src="/sites/all/themes/habitat/images/don_img2.jpg"></a>
+                <a href="/donate" style="margin:0; line-height:0; display:block;"><img style="max-width:100%; margin:0;" src="/sites/all/themes/habitat/images/don_img1.jpg"></a>
+                <a href="/volunteer" style="margin:0; line-height:0;"><img style="max-width:100%; margin:0;" src="/sites/all/themes/habitat/images/don_img2.jpg"></a>
             </div>
         <?php } ?>
 
@@ -134,7 +134,7 @@
 
         	<div class="f_left">
 				<a class="habitat_f_humanity_f_logo" href="<?php print base_path();?>"></a><br/>
-                <p class="address"><a href="?q=node/9" class="footer_con_add">1787 London Line Sarnia, Ontario, N7T 7H2</a></p>
+                <p class="address"><a href="/contact" class="footer_con_add">1787 London Line Sarnia, Ontario, N7T 7H2</a></p>
               	<ul class="social" style="margin:3px 0 0 0; padding:0;">
                 	<li class="fb"><a target="_blank" href="https://www.facebook.com/pages/Habitat-for-Humanity-SarniaLambton/255991847841581">&nbsp;</a></li>
                 	<li class="tw"><a target="_blank" href="https://twitter.com/habitatsarnia">&nbsp;</a></li>
@@ -147,38 +147,38 @@
             <div class="f_center">
             	<ul>
                 	<li><a href="<?php print base_path();?>"><span>Home</span></a>
-                	<li><a href="/?q=node/2"><span>About</span></a>
-                	<li><a href="/?q=node/3"><span>Volunteer<span></a>
-                	<li><a href="/?q=node/10">Restore</a>
-                	<li><a href="/?q=node/14">Builds</a>
-                	<li><a href="/?q=node/11">Our Affiliate</a>
+                	<li><a href="/about"><span>About</span></a>
+                	<li><a href="/volunteer"><span>Volunteer<span></a>
+                	<li><a href="/volunteer/restore">Restore</a>
+                	<li><a href="/volunteer/builds">Builds</a>
+                	<li><a href="/volunteer/our-affiliate">Our Affiliate</a>
                 </ul>
 
                 <ul>
-                	<li><a href="/?q=node/4"><span class="footer_link1">Homeownership</span></a>
-                	<li><a href="/?q=node/15">General Information</a>
-                	<li><a href="/?q=node/16">Homeowner's Role</a>
+                	<li><a href="/homeownership/general-information"><span class="footer_link1">Homeownership</span></a>
+                	<li><a href="/homeownership/general-information">General Information</a>
+                	<li><a href="/homeownership/homeowners-role">Homeowner's Role</a>
                 	<li><a href="http://habitatsarnia.org/pdfs/2013_Application_for_Housing_Partnership_Form.pdf">Apply Now</a>
-                	<li><a href="/?q=node/6"><span>Our Restore</span></a>
-                	<li><a href="/?q=node/5"><span class="footer_link1">Local Builds</span></a>
-                    <li><a href="/?q=node/5">Our Builds</a>
-                	<li><a href="/?q=node/19">Photo Gallery</a>
+                	<li><a href="/our-restore"><span>Our Restore</span></a>
+                	<li><a href="/local-builds"><span class="footer_link1">Local Builds</span></a>
+                    <li><a href="/local-builds">Our Builds</a>
+                	<li><a href="/local-builds/photo-gallery">Photo Gallery</a>
                 </ul>
 
                 <ul>
-                	<li><a href="/?q=node/20"><span class="footer_link1">International Builds</span></a>
-                	<li><a href="/?q=node/20">Our Builds</a>
-                	<li><a href="/?q=node/21">Photo Gallery</a>
-                	<li><a href="/?q=node/8"><span>Sponsors</span></a>
-                	<li><a href="/?q=node/9"><span>Contact</span></a>
-                	<li><a href="/?q=node/12"><img src="<?php print base_path() . drupal_get_path('theme', 'habitat');?>/images/f_don_btn.png"/></a>
+                	<li><a href="/international-builds"><span class="footer_link1">International Builds</span></a>
+                	<li><a href="/international-builds">Our Builds</a>
+                	<li><a href="/international-builds/photo-gallery">Photo Gallery</a>
+                	<li><a href="/sponsors"><span>Sponsors</span></a>
+                	<li><a href="/contact"><span>Contact</span></a>
+                	<li><a href="/donate"><img src="<?php print base_path() . drupal_get_path('theme', 'habitat');?>/images/f_don_btn.png"/></a>
                 </ul>
              </div>
 
             <div class="f_right">
-            	<a href="http://www.sarnialambtonchamber.com/" class="f_othr_logos1" target="_blank">Sarnia-Lambton Chamber of Commerce</a><br />
-                <a href="http://www.habitat.ca/" class="f_othr_logos2" target="_blank" target="_blank">Habitat for Humanity</a><br />
-                <a href="/?q=node/6" class="f_othr_logos3">Habitat for Humanity ReStore</a>
+            	<a href="http://www.sarnialambtonchamber.com/" class="f_othr_logos1" target="_blank" title="Sarnia-Lambton Chamber of Commerce">Sarnia-Lambton Chamber of Commerce</a><br />
+                <a href="http://www.habitat.ca/" class="f_othr_logos2" target="_blank" title="Habitat for Humanity Canada">Habitat for Humanity Canada</a><br />
+                <a href="/our-restore" class="f_othr_logos3" title="Habitat for Humanity ReStore">Habitat for Humanity ReStore</a>
             </div>
 
         </div>
