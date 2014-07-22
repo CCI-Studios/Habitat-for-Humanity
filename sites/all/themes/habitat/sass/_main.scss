@@ -202,7 +202,16 @@ img
                 font-size:0;
                 color:transparent;
 
-                &.fb
+                &:after
+                {
+                    content:"";
+                    display: block;
+                    position: absolute;
+                    left: -99999px;
+                }
+
+                &.fb,
+                &:after
                 {
                     background-image:url(/sites/all/themes/habitat/images/social.png);
                     background-position:0 0;
@@ -211,6 +220,8 @@ img
                 {
                     background-image:url(/sites/all/themes/habitat/images/social.png);
                     background-position: -39px 0;
+
+
                 }
             }
         }
