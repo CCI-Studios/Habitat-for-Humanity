@@ -350,7 +350,9 @@ li.last
     color:#fff!important;
 }
 
-.nav li:hover,.active-trail,li > a.active
+.nav li:hover,
+.active-trail,
+.nav li > a.active
 {
     color:#fff;
     background:url(../images/li_hov.png) no-repeat center top #55bb49;
