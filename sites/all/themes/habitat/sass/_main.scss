@@ -138,22 +138,29 @@ img
 
 .inner_width
 {
-    width:940px;
-    display:table;
+    width: 100%;
+    max-width:940px;
     margin:0 auto;
+
+    &:after
+    {
+        content:"";
+        display: block;
+        clear: both;
+    }
 }
 
 .header
 {
     width:100%;
-    background:url(/sites/all/themes/habitat/images/header.jpg) repeat;
+    background:url(../images/header.jpg) repeat;
     margin:-18px 0 0;
 }
 
 .top
 {
     height:140px;
-    margin:13px 0;
+    padding:13px 0;
 }
 
 #logo
@@ -213,12 +220,12 @@ img
                 &.fb,
                 &:after
                 {
-                    background-image:url(/sites/all/themes/habitat/images/social.png);
+                    background-image:url(../images/social.png);
                     background-position:0 0;
                 }
                 &.tw
                 {
-                    background-image:url(/sites/all/themes/habitat/images/social.png);
+                    background-image:url(../images/social.png);
                     background-position: -39px 0;
 
 
@@ -256,7 +263,7 @@ img
 
 .footer .fb a
 {
-    background:url(/sites/all/themes/habitat/images/social_f.png) no-repeat 0 0;
+    background:url(../images/social_f.png) no-repeat 0 0;
     float:left!important;
     height:31px;
     width:31px!important;
@@ -264,7 +271,7 @@ img
 
 .footer .tw a
 {
-    background:url(/sites/all/themes/habitat/images/social_f.png) no-repeat -39px 0;
+    background:url(../images/social_f.png) no-repeat -39px 0;
     float:left!important;
     height:31px;
     width:31px!important;
@@ -272,17 +279,17 @@ img
 
 .fb a:hover
 {
-    background:url(/sites/all/themes/habitat/images/social_h.png) no-repeat 0 0;
+    background:url(../images/social_h.png) no-repeat 0 0;
 }
 
 .tw a:hover
 {
-    background:url(/sites/all/themes/habitat/images/social_h.png) no-repeat -39px 0;
+    background:url(../images/social_h.png) no-repeat -39px 0;
 }
 
 .restore
 {
-    background:url(/sites/all/themes/habitat/images/r_logo.png) no-repeat;
+    background:url(../images/r_logo.png) no-repeat;
     float:right;
     height:82px;
     width:191px;
@@ -293,9 +300,9 @@ img
 {
     background:#005596;
     width:100%;
-    border-top:2px solid #52B84A;
-    border-bottom:2px solid #52B84A;
-    height:43px;
+    border-top:2px solid $green;
+    border-bottom:2px solid $green;
+    position: relative;
 }
 
 #block-system-main-menu .content li
@@ -306,7 +313,7 @@ img
     color:#fff;
     position:relative;
     list-style-image:none!important;
-    margin:0 1px!important;
+    margin:0 1px;
     padding:0!important;
 }
 
@@ -346,7 +353,7 @@ li.last
 .nav li:hover,.active-trail,li > a.active
 {
     color:#fff;
-    background:url(/sites/all/themes/habitat/images/li_hov.png) no-repeat center top #55bb49;
+    background:url(../images/li_hov.png) no-repeat center top #55bb49;
 }
 
 .nav li a:hover
@@ -357,7 +364,7 @@ li.last
 .nav li > ul
 {
     background-color:#005596;
-    border:2px solid #52B84A;
+    border:2px solid $green;
     display:none;
     left:0;
     list-style-type:none;
@@ -381,7 +388,18 @@ li.last
 
 .nav li li:hover
 {
-    background:url(/sites/all/themes/habitat/images/lili_hov.png) no-repeat 130px 10px #55bb49!important;
+    background:url(../images/lili_hov.png) no-repeat 130px 10px #55bb49;
+}
+
+.nav #block-block-5
+{
+    display: none;
+
+    p
+    {
+        margin:0;
+        padding: 0;
+    }
 }
 
 .banner
@@ -391,7 +409,7 @@ li.last
     text-align:center;
     position:relative;
     z-index:1;
-    background:url(/sites/all/themes/habitat/images/slider_bg.jpg) no-repeat center top #55bb49!important;
+    background:url(../images/slider_bg.jpg) no-repeat center top #55bb49!important;
     border-bottom:2px solid #52B84A;
     height:336px;
 }
@@ -404,7 +422,7 @@ li.last
 .container
 {
     width:100%;
-    background:url(/sites/all/themes/habitat/images/con_bg.jpg) repeat;
+    background:url(../images/con_bg.jpg) repeat;
     padding:20px 0;
 }
 
@@ -503,6 +521,10 @@ body.page-our-restore .page_title
     line-height:14px;
     padding:5px 0;
 }
+.content iframe
+{
+    max-width:100%;
+}
 
 .aboutus_page_video
 {
@@ -511,19 +533,19 @@ body.page-our-restore .page_title
 
 .wat_new1
 {
-    background:url(/sites/all/themes/habitat/images/wat_line.png) no-repeat right 32%;
+    background:url(../images/wat_line.png) no-repeat right 32%;
     width:49%!important;
 }
 
 .video h1
 {
-    background:url(/sites/all/themes/habitat/images/vid_icon.png) no-repeat scroll 200px 10px;
+    background:url(../images/vid_icon.png) no-repeat scroll 200px 10px;
     width:82%;
 }
 
 .content_cen h1
 {
-    background:url(/sites/all/themes/habitat/images/wat_icon.png) no-repeat scroll 420px 20px;
+    background:url(../images/wat_icon.png) no-repeat scroll 420px 20px;
     float:left;
     width:79%;
     margin:0!important;
@@ -939,10 +961,10 @@ h1.vid_icon,h1.wel_icon
 
 .donate_tabs_right
 {
-    float:right;
+    float:left;
     width:305px;
     border:1px solid #72a1c5;
-    margin:0;
+    margin:0 0 0 20px;
     padding:0;
 }
 
@@ -1195,7 +1217,7 @@ h1.vid_icon,h1.wel_icon
 
 .submit_button1
 {
-    background:url(/sites/all/themes/habitat/images/submitbutton_1.png) no-repeat;
+    background:url(../images/submitbutton_1.png) no-repeat;
     width:105px;
     height:32px;
     display:block;
@@ -1229,7 +1251,7 @@ input[type=checkbox].css-checkbox
 
 .restore_volunteer_form_label-1,.check_fileds_label
 {
-    background:url(/sites/all/themes/habitat/images/checkboxbg.png) no-repeat;
+    background:url(../images/checkboxbg.png) no-repeat;
 }
 
 input[type=checkbox].css-checkbox.med + label.checkbox_label.med
@@ -1285,7 +1307,7 @@ input[type=checkbox].css-checkbox.med:checked + label.checkbox_label.med
 .step_5 ul li
 {
     list-style:none;
-    background:url(/sites/all/themes/habitat/images/step5_libg.png) no-repeat left 2px;
+    background:url(../images/step5_libg.png) no-repeat left 2px;
     margin:1px 0 1px 10px;
     padding:0 0 0 25px;
 }
@@ -1335,7 +1357,7 @@ input[type=checkbox].css-checkbox.med:checked + label.checkbox_label.med
 
 .habitat_f_humanity_f_logo
 {
-    background:url(/sites/all/themes/habitat/images/f_logo1.png) no-repeat;
+    background:url(../images/f_logo1.png) no-repeat;
     width:240px;
     height:96px;
     display:inline-block;
@@ -1353,13 +1375,13 @@ input[type=checkbox].css-checkbox.med:checked + label.checkbox_label.med
     &:hover,
     &:after
     {
-        background-image: url(/sites/all/themes/habitat/images/f_logo_over.png);
+        background-image: url(../images/f_logo_over.png);
     }
 }
 
 .f_othr_logos1
 {
-    background:url(/sites/all/themes/habitat/images/f_othr_logos1.png) no-repeat;
+    background:url(../images/f_othr_logos1.png) no-repeat;
     width:125px;
     height:53px;
     display:inline-block;
@@ -1377,13 +1399,13 @@ input[type=checkbox].css-checkbox.med:checked + label.checkbox_label.med
     &:hover,
     &:after
     {
-        background-image: url(/sites/all/themes/habitat/images/f_othr_logos1_over.png);
+        background-image: url(../images/f_othr_logos1_over.png);
     }
 }
 
 .f_othr_logos2
 {
-    background:url(/sites/all/themes/habitat/images/f_othr_logos2.png) no-repeat;
+    background:url(../images/f_othr_logos2.png) no-repeat;
     width:125px;
     height:47px;
     display:inline-block;
@@ -1401,13 +1423,13 @@ input[type=checkbox].css-checkbox.med:checked + label.checkbox_label.med
     &:hover,
     &:after
     {
-        background-image: url(/sites/all/themes/habitat/images/f_othr_logos2_over.png);
+        background-image: url(../images/f_othr_logos2_over.png);
     }
 }
 
 .f_othr_logos3
 {
-    background:url(/sites/all/themes/habitat/images/f_othr_logos3.png) no-repeat;
+    background:url(../images/f_othr_logos3.png) no-repeat;
     width:125px;
     height:59px;
     display:inline-block;
@@ -1425,13 +1447,13 @@ input[type=checkbox].css-checkbox.med:checked + label.checkbox_label.med
     &:hover,
     &:after
     {
-        background-image: url(/sites/all/themes/habitat/images/f_othr_logos3_over.png);
+        background-image: url(../images/f_othr_logos3_over.png);
     }
 }
 
 .restorebutton1
 {
-    background:url(/sites/all/themes/habitat/images/restorebutton_normel.png) no-repeat;
+    background:url(../images/restorebutton_normel.png) no-repeat;
     width:544px;
     height:73px;
     display:inline-block;
@@ -1449,13 +1471,13 @@ input[type=checkbox].css-checkbox.med:checked + label.checkbox_label.med
     &:hover,
     &:after
     {
-        background-image: url(/sites/all/themes/habitat/images/restorebutton_over.png);
+        background-image: url(../images/restorebutton_over.png);
     }
 }
 
 .buildsbutton1
 {
-    background:url(/sites/all/themes/habitat/images/buildsbutton1.png) no-repeat;
+    background:url(../images/buildsbutton1.png) no-repeat;
     width:544px;
     height:73px;
     display:inline-block;
@@ -1473,13 +1495,13 @@ input[type=checkbox].css-checkbox.med:checked + label.checkbox_label.med
     &:hover,
     &:after
     {
-        background-image: url(/sites/all/themes/habitat/images/buildsbutton1_over.png);
+        background-image: url(../images/buildsbutton1_over.png);
     }
 }
 
 .ouraffiliatebutton
 {
-    background:url(/sites/all/themes/habitat/images/ouraffiliatebutton.png) no-repeat;
+    background:url(../images/ouraffiliatebutton.png) no-repeat;
     width:544px;
     height:73px;
     display:inline-block;
@@ -1497,7 +1519,7 @@ input[type=checkbox].css-checkbox.med:checked + label.checkbox_label.med
     &:hover,
     &:after
     {
-        background-image: url(/sites/all/themes/habitat/images/ouraffiliatebutton_over.png);
+        background-image: url(../images/ouraffiliatebutton_over.png);
     }
 }
 
@@ -1659,7 +1681,7 @@ input[type=checkbox].css-checkbox.med:checked + label.checkbox_label.med
 
 .fv_icon,.fea_val h1
 {
-    background:url(/sites/all/themes/habitat/images/fv_icon.png) no-repeat scroll 360px 10px;
+    background:url(../images/fv_icon.png) no-repeat scroll 360px 10px;
     float:left;
     width:97%;
     margin:0;
@@ -1680,7 +1702,7 @@ input[type=checkbox].css-checkbox.med:checked + label.checkbox_label.med
 
 .general_informationsidebar_menu ul li a:hover,.current_tap_homeowner a:link,.current_tap_homeowner a:visited
 {
-    background:url(/sites/all/themes/habitat/images/lili_hov.png) no-repeat 200px 10px #55bb49;
+    background:url(../images/lili_hov.png) no-repeat 200px 10px #55bb49;
 }
 
 .step3_topdetails_left,.step3_topdetails_right
@@ -1704,6 +1726,7 @@ input[type=checkbox].css-checkbox.med:checked + label.checkbox_label.med
     overflow: hidden;
     border-bottom:2px solid $green;
     position: relative;
+    clear: both;
 }
 .view-header-slideshow
 {
@@ -1798,57 +1821,5 @@ input[type=checkbox].css-checkbox.med:checked + label.checkbox_label.med
         font-size: 0.8em;
         height: 2.5em;
         padding: 0 15px;
-    }
-}
-
-@media screen and (min-width 900px) and (max-width 939px) {
-    .inner_width
-    {
-        width:98%;
-        margin:0 auto;
-        padding:0;
-    }
-
-    .nav a
-    {
-        padding:13px 10px;
-    }
-
-    .content_main
-    {
-        width:69%;
-    }
-
-    .sidebar
-    {
-        width:28.5%!important;
-    }
-
-    .welcome
-    {
-        width:39%!important;
-        float:left!important;
-    }
-
-    .video
-    {
-        width:50%!important;
-        float:left!important;
-    }
-
-    .content_btm
-    {
-        width:99.5%!important;
-    }
-
-    #masthead,.slides,.image,.image img
-    {
-        width:98%;
-    }
-
-    .wat_new1,.wat_new2
-    {
-        float:left!important;
-        width:45%!important;
     }
 }

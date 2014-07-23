@@ -5,6 +5,7 @@ core = 7.x
 
 stylesheets[all][] = css/screen.css
 scripts[] = js/slideshow.js
+scripts[] = js/menu-btn.js
 
 regions[sidebar_first]  = First Sidebar
 regions[sidebar_second] = Second Sidebar

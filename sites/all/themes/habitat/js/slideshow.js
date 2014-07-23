@@ -1,9 +1,11 @@
 (function($) {
-    var WIDTH = 660;
     var HEIGHT = 340;
     var timer;
 
     $(function(){
+        imageSizing();
+        $(window).resize(imageSizing);
+
         setActive(1);
         timer = setInterval(next, 4000);
 
@@ -27,12 +29,31 @@
     {
         return rows().filter(".active");
     }
+    function width()
+    {
+        var windowWidth = $(window).width();
+        if (windowWidth <= 768)
+        {
+            return windowWidth - 60;
+        }
+        return 660;
+    }
+    function imageSizing()
+    {
+        container().find("img").width(width());
+
+        var $active = activeRow();
+        if ($active.length)
+        {
+            setActive($active.index());
+        }
+    }
 
     function setActive(i)
     {
         row(i).addClass("active").css("opacity",1);
         container().css({
-            "left":"-" + (i*WIDTH) + "px"
+            "left":"-" + (i*width()) + "px"
         });
     }
 
@@ -53,7 +74,7 @@
         });
 
         container().animate({
-            "left":"-" + ($next.index()*WIDTH) + "px"
+            "left":"-" + ($next.index()*width()) + "px"
         });
     }
     function prev()
@@ -73,7 +94,7 @@
         });
 
         container().animate({
-            "left":"-" + ($next.index()*WIDTH) + "px"
+            "left":"-" + ($next.index()*width()) + "px"
         });
     }
 
