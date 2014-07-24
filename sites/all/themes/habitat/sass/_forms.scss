@@ -1,0 +1,350 @@
+.webform-steps-wrapper
+{
+    overflow: hidden;
+}
+.webform-step
+{
+    position: relative;
+    display: block;
+    color:transparent;
+    font-size: 0;
+    float: left;
+
+    input
+    {
+        opacity:0;
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 32px;
+        height: 32px;
+        z-index: 1;
+        cursor: pointer;
+        border:0;
+    }
+    &.disabled input
+    {
+        cursor:not-allowed;
+    }
+
+    &:before
+    {
+        display: block;
+        content:"";
+        height:1px;
+        background:$green;
+        width: 75px;
+        margin: 15px 7px;
+        float: left;
+    }
+    & > span
+    {
+        position: relative;
+        background:$green;
+        width: 32px;
+        height: 32px;
+        display: block;
+        border-radius:16px;
+        float: left;
+
+        &:after
+        {
+            @extend .clearface;
+            display: block;
+            font-size:24px;
+            color:white;
+            width: 32px;
+            text-align: center;
+            line-height: 32px;
+        }
+    }
+    &.disabled > span,
+    &.disabled:before
+    {
+        background:#a1a1a1;
+    }
+    &.first:before
+    {
+        display: none;
+    }
+    &.step-1 > span:after
+    {
+        content:"1";
+    }
+    &.step-2 > span:after
+    {
+        content:"2";
+    }
+    &.step-3 > span:after
+    {
+        content:"3";
+    }
+    &.step-4 > span:after
+    {
+        content:"4";
+    }
+    &.step-5 > span:after
+    {
+        content:"5";
+    }
+    &.step-6 > span:after
+    {
+        content:"6";
+    }
+}
+
+
+#edit-next,
+#edit-submit
+{
+    @extend .clearface;
+    display: inline-block;
+    border:0;
+    background:$green;
+    color:white;
+    padding: 4px 15px;
+    font-size: 20px;
+    border-radius:3px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+#edit-previous
+{
+    display: none;
+}
+
+form.webform-client-form
+{
+    h2
+    {
+        color:$blue;
+        font-size: 40px;
+        line-height: 40px;
+        border-bottom: 1px solid $green;
+        display: inline-block;
+        text-shadow:-1px 1px 2px rgba(0,71,125, 0.3);
+    }
+
+    .webform-component-textfield,
+    .webform-component-email
+    {
+        input
+        {
+            border:1px solid $blue;
+            box-shadow:inset 3px 3px 1px 0 #dddddd;
+            width: 215px;
+            padding: 2px 4px;
+        }
+    }
+    .form-item input.error
+    {
+        border:2px solid red;
+    }
+    textarea
+    {
+        border:1px solid $blue;
+        box-shadow:inset 3px 3px 1px 0 #dddddd;
+        width: 100%;
+        padding: 2px 4px;
+        height: 5em;
+    }
+    .grippie
+    {
+        display: none;
+    }
+
+    select
+    {
+        border:1px solid $blue;
+        box-shadow:inset 3px 3px 1px 0 #dddddd;
+        background:white;
+    }
+
+    .form-item
+    {
+        margin:0.75em 0;
+    }
+
+    #webform-component-first-name,
+    #webform-component-gender,
+    #webform-component-city,
+    #webform-component-employer
+    {
+        float: left;
+        margin-right: 20px;
+        margin-top: 0;
+        clear: none;
+    }
+
+    #webform-component-address,
+    #webform-component-phone-number,
+    #webform-component-team-name,
+    #webform-component-are-you-volunteering-for-required-community-service-hours,
+    #webform-component-we-know-that-sometimes-our-volunteers-are-interested-in-helping-habitat-with-more-than-just-restore-please-select-any-other-area
+    {
+        clear: both;
+    }
+
+    .form-checkboxes,
+    .form-radios
+	{
+		overflow:hidden;
+		margin-bottom:10px;
+
+		.form-item
+		{
+			clear:none;
+			position: relative;
+			overflow: visible;
+
+			input
+			{
+				float:right;
+			}
+
+			&:not(#foo)
+			{
+				input
+				{
+					opacity:0;
+				}
+
+				input + label:after
+				{
+					content:"";
+					display: block;
+					width: 26px;
+					height: 22px;
+					background: url(../images/checkboxbg.png) no-repeat left top;
+					position: absolute;
+					top: 0;
+					right: 0;
+				}
+
+				input:checked + label:after
+				{
+					background-position:left -23px;
+				}
+
+				input:focus + label:after
+				{
+					box-shadow:0 0 5px $blue;
+				}
+			}
+
+			label
+			{
+				width:auto;
+				float:none;
+				clear:none;
+				margin-right:0;
+				padding-right:30px;
+			}
+		}
+	}
+
+    #webform-component-do-you-have-any-health-issues-we-should-be-aware-of,
+    #webform-component-are-you-volunteering-for-high-school-community-service-hours,
+    #webform-component-are-you-volunteering-for-required-community-service-hours
+    {
+        & > label
+        {
+            float: left;
+            width: 220px;
+            margin-right: 20px;
+        }
+        .form-item
+        {
+            float: left;
+            margin-right: 20px;
+        }
+    }
+    #webform-component-if-yes-please-describe
+    {
+        & > label
+        {
+            float: left;
+            width: 220px;
+            margin-right: 20px;
+        }
+
+        textarea
+        {
+            width: 220px;
+        }
+    }
+    #webform-component-what-kind-of-build-site-volunteer-activities-are-you-interested-in
+    {
+        & > label
+        {
+            float: left;
+            width: 220px;
+            margin-right: 20px;
+        }
+
+        .form-item
+        {
+            width: 280px;
+            margin-top: 0;
+            margin-bottom: 0;
+            padding-bottom: 5px;
+
+            .description
+            {
+                margin-left: 0;
+            }
+        }
+    }
+    #webform-component-sunday,
+    #webform-component-monday,
+    #webform-component-tuesday,
+    #webform-component-wednesday,
+    #webform-component-thursday,
+    #webform-component-friday,
+    #webform-component-saturday
+    {
+        & > label
+        {
+            width: 220px;
+            float: left;
+            margin-right: 20px;
+            text-align: right;
+        }
+        .form-item
+        {
+            float: left;
+            margin-right: 30px;
+            margin-top: 0;
+        }
+    }
+    #webform-component-we-know-that-sometimes-our-volunteers-are-interested-in-helping-habitat-with-more-than-just-restore-please-select-any-other-area,
+    #webform-component-we-know-that-sometimes-our-volunteers-are-interested-in-helping-habitat-with-more-than-just-restore
+    {
+        .form-item
+        {
+            float: left;
+            margin-right:30px;
+            margin-top: 0;
+        }
+    }
+    #webform-component-i-confirm-that-i-have-watched-this-video-in-its-entirety,
+    #webform-component-i-confirm-i-have-watched-this-video-in-its-entirety,
+    #webform-component-i-have-read-and-understand-the-site-safety-guidelines,
+    #edit-submitted-i-have-read-the-above-and-understand-habitat-for-humanity-sarnia-lambtons-volunteer-guidelines-and-code-of-conduct
+    {
+        .form-item
+        {
+            label
+            {
+                padding:0 0 0 30px;
+
+                &:after
+                {
+                    right: auto;
+                    left: 0;
+                }
+            }
+        }
+    }
+}

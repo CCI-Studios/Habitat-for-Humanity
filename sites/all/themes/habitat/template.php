@@ -10,4 +10,8 @@ function habitat_preprocess_html(&$vars) {
     }
 }
 
+function habitat_css_alter(&$css) {
+    unset($css[drupal_get_path('module', 'webform_steps') . '/webform_steps.css']);
+}
+
 ?>
