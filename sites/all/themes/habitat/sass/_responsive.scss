@@ -374,7 +374,93 @@
             }
         }
     }
+
+    .webform-step:before
+    {
+        width: 18px;
+        margin:15px 0;
+    }
 }
+
+
+
+
+
+
+
+@media screen and (max-width:540px)
+{
+    form.webform-client-form
+    {
+        #webform-component-first-name,
+        #webform-component-gender,
+        #webform-component-city,
+        #webform-component-employer
+        {
+            float: none;
+        }
+
+        #webform-component-do-you-have-any-health-issues-we-should-be-aware-of,
+        #webform-component-are-you-volunteering-for-high-school-community-service-hours,
+        #webform-component-are-you-volunteering-for-required-community-service-hours
+        {
+            & > label
+            {
+                width: auto;
+            }
+            .form-radios
+            {
+                clear: both;
+            }
+        }
+
+        #webform-component-what-kind-of-build-site-volunteer-activities-are-you-interested-in
+        {
+            & > label
+            {
+                width: auto;
+                float: none;
+                margin-right:0;
+            }
+
+            .form-item
+            {
+                width: auto;
+            }
+        }
+
+        #webform-component-sunday,
+        #webform-component-monday,
+        #webform-component-tuesday,
+        #webform-component-wednesday,
+        #webform-component-thursday,
+        #webform-component-friday,
+        #webform-component-saturday
+        {
+            & > label
+            {
+                width: 95px;
+                margin-right: 15px;
+            }
+            .form-item
+            {
+                float:none;
+                margin-right:0;
+                width:110px;
+            }
+        }
+
+        #webform-component-we-know-that-sometimes-our-volunteers-are-interested-in-helping-habitat-with-more-than-just-restore-please-select-any-other-area
+        {
+            .form-item
+            {
+                float: none;
+            }
+        }
+    }
+}
+
+
 
 
 
