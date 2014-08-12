@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <head>
 <?php print $head; ?>
+<meta name="viewport" content="width=device-width, user-scalable=no">
 <title><?php print $head_title; ?></title>
 <script type="text/javascript" src="//use.typekit.net/rex6fpe.js"></script>
 <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
