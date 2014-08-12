@@ -1,4 +1,6 @@
 (function($) {
+    var player;
+
     $(function(){
         var $container = $("#webform-component-what-kind-of-build-site-volunteer-activities-are-you-interested-in");
 
@@ -15,6 +17,60 @@
         .append("<div class='description'>Assists customers. Does not operate the cash register.<br /><strong>Does not load or carry merchandise.</strong></div>");
 
         $container.find(".form-item-submitted-what-kind-of-build-site-volunteer-activities-are-you-interested-in-admin label")
-        .append("<div class='description'>Assists with administrative duties. Admin tasks requireshort-term volunteer assistance at various points in the year.</div>");
+        .append("<div class='description'>Assists with administrative duties. Admin tasks require short-term volunteer assistance at various points in the year.</div>");
+
+        youtubeSetup();
     });
+
+    function youtubeSetup()
+    {
+        if (youtubePlayerOnPage())
+        {
+            loadYoutubeAPI();
+            disableNextStep();
+        }
+    }
+    function youtubePlayerOnPage()
+    {
+        return $("#youtube-player").length > 0;
+    }
+
+    function loadYoutubeAPI()
+    {
+        var tag = document.createElement('script');
+        tag.src = "https://www.youtube.com/iframe_api";
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+    }
+
+    function disableNextStep()
+    {
+        $("#edit-submitted-i-confirm-that-i-have-watched-this-video-in-its-entirety input, #edit-submitted-i-confirm-that-i-have-watched-this-video-in-its-entirety-2 input, #edit-submitted-i-confirm-i-have-watched-this-video-in-its-entirety input, #edit-next").attr("disabled","true");
+    }
 }(jQuery));
+
+function onYouTubeIframeAPIReady() {
+    var videoid = jQuery("#youtube-player").data("src");
+    player = new YT.Player('youtube-player', {
+        height: '390',
+        width: '640',
+        videoId: videoid,
+        playerVars: { 'controls': 1 },
+        events: {
+            'onStateChange': onPlayerStateChange
+        }
+    });
+}
+
+function onPlayerStateChange(event)
+{
+    if (event.data == YT.PlayerState.ENDED)
+    {
+        enableNextStep();
+    }
+}
+
+function enableNextStep()
+{
+    jQuery("#edit-submitted-i-confirm-that-i-have-watched-this-video-in-its-entirety input, #edit-submitted-i-confirm-that-i-have-watched-this-video-in-its-entirety-2 input, #edit-submitted-i-confirm-i-have-watched-this-video-in-its-entirety input, #edit-next").prop("disabled","");
+}
