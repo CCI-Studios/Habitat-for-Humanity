@@ -720,10 +720,12 @@ h1.vid_icon,h1.wel_icon
     padding:5.8px 0 5px;
 }
 
-.sidebar a
+.sidebar a,
+.sidebar span.green
 {
     font-size:16px;
     line-height:17px;
+    color:$green;
 }
 
 .ins
