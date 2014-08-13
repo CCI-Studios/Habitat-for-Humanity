@@ -487,6 +487,13 @@ body.page-volunteer.page-restore.page-apply .page_title
     background-image:url(../images/volunteer_restore_application.png);
     padding-left: 510px;
 }
+body.page-submitted .page_title
+{
+    font-size:0;
+    color:transparent;
+    background:url(../images/volunteer_restore_application.png) no-repeat left center;
+    padding-left: 519px;
+}
 body.page-our-restore .page_title
 {
     font-size:0;
