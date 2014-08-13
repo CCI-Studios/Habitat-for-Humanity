@@ -319,6 +319,22 @@
             }
         }
     }
+    form.webform-client-form
+    {
+        #webform-component-sunday,
+        #webform-component-monday,
+        #webform-component-tuesday,
+        #webform-component-wednesday,
+        #webform-component-thursday,
+        #webform-component-friday,
+        #webform-component-saturday
+        {
+            & > label
+            {
+                width: 120px;
+            }
+        }
+    }
 }
 
 
