@@ -7,7 +7,7 @@
     function fixContentHeight()
     {
         var $content = $(".content_main");
-        var $sidebar = $(".sidebar");
+        var $sidebar = $(".sidebar.first");
         var content_height = $content.height();
         var sidebar_height = $sidebar.height();
 
