@@ -466,6 +466,7 @@ li.last
 .page_title
 {
     float:left;
+    width: 100%;
 }
 
 .page_title .icon
@@ -474,32 +475,43 @@ li.last
     width:49px;
     height:50px;
     display: inline-block;
+    vertical-align: middle;
 }
-body.page-volunteer.page-restore .page_title
+body.page-volunteer.page-restore .page_title .text
 {
+    display: inline-block;
+    vertical-align: middle;
     font-size:0;
     color:transparent;
-    padding-left:303px;
+    max-width:303px;
+    width:100%;
     background:url(../images/volunteer_restore.png) no-repeat left center;
+    background-size:contain;
 }
-body.page-volunteer.page-restore.page-apply .page_title
+body.page-volunteer.page-restore.page-apply .page_title .text
 {
     background-image:url(../images/volunteer_restore_application.png);
-    padding-left: 510px;
+    max-width: 510px;
 }
-body.page-submitted-restore .page_title
+body.page-submitted-restore .page_title .text
 {
+    display: inline-block;
+    vertical-align: middle;
     font-size:0;
     color:transparent;
     background:url(../images/volunteer_restore_application.png) no-repeat left center;
-    padding-left: 519px;
+    max-width: 519px;
+    width: 100%;
 }
-body.page-our-restore .page_title
+body.page-our-restore .page_title .text
 {
+    display: inline-block;
+    vertical-align: middle;
     font-size:0;
     color:transparent;
-    padding-left:202px;
+    max-width:202px;
     background:url(../images/restore_title.png) no-repeat left center;
+    width: 100%;
 }
 
 

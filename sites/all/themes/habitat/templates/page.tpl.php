@@ -95,7 +95,7 @@
         <div class="content_main">
             <div class="content_top">
                 <?php if (!$is_front) {?>
-                    <h1 class="page_title <?php print arg(0, request_path());?>_title"><span><?php print $title; ?></span> <span class="icon">&nbsp;</span></h1>
+                    <h1 class="page_title <?php print arg(0, request_path());?>_title"><span class="text"><?php print $title; ?></span> <span class="icon">&nbsp;</span></h1>
                     <br clear="all"/>
                 <?php } ?>
 
