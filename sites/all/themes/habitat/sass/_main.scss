@@ -869,9 +869,10 @@ h1.vid_icon,h1.wel_icon
 .local_builds_video
 {
     float:left;
-    width:365px;
+    max-width:365px;
     margin:0;
     padding:0;
+    width: 100%;
 }
 
 .local_builds_bottombutton
