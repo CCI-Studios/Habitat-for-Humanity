@@ -282,6 +282,8 @@ form.webform-client-form
     }
     #webform-component-what-kind-of-build-site-volunteer-activities-are-you-interested-in
     {
+        position: relative;
+        
         & > label
         {
             float: left;
@@ -296,15 +298,19 @@ form.webform-client-form
             margin-bottom: 0;
             padding-bottom: 5px;
 
-            .description
-            {
-                margin-left: 0;
-            }
-
             label
             {
                 display: block;
             }
+        }
+
+        & > .description
+        {
+            margin-left: 0;
+            position: absolute;
+            left: 0;
+            top: 40px;
+            width: 220px;
         }
     }
     #webform-component-sunday,
