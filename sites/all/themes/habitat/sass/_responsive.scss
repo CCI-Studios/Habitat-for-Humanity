@@ -500,6 +500,11 @@
             }
         }
     }
+    
+    body.not-front .sidebar.first
+    {
+        display: none;
+    }
 }
 
 
