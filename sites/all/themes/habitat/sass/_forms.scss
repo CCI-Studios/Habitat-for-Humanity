@@ -98,6 +98,14 @@ input[disabled=disabled], input[disabled=disabled] + label, button[disabled=disa
     {
         content:"6";
     }
+    &.step-7 > span:after
+    {
+        content:"7";
+    }
+    &.step-8 > span:after
+    {
+        content:"8";
+    }
 }
 
 
@@ -283,7 +291,7 @@ form.webform-client-form
     #webform-component-what-kind-of-build-site-volunteer-activities-are-you-interested-in
     {
         position: relative;
-        
+
         & > label
         {
             float: left;
