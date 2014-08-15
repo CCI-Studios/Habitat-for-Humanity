@@ -1,7 +1,4 @@
 (function($) {
-    $(function(){
-        fixContentHeight();
-    });
     $(window).load(fixContentHeight);
 
     function fixContentHeight()
