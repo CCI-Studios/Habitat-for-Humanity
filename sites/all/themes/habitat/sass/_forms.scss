@@ -376,4 +376,29 @@ form.webform-client-form
             }
         }
     }
+
+    #edit-submitted-what-kind-of-build-site-volunteer-activities-are-you-interested-in
+    {
+        .form-item-submitted-what-kind-of-build-site-volunteer-activities-are-you-interested-in-officeadmin,
+        .form-item-submitted-what-kind-of-build-site-volunteer-activities-are-you-interested-in-board
+        {
+            label
+            {
+                font-weight: bold;
+            }
+        }
+        .form-item-submitted-what-kind-of-build-site-volunteer-activities-are-you-interested-in-familyrelations
+        {
+            &:before
+            {
+                content:"Committee Participation";
+                display: block;
+                font-weight: bold;
+            }
+            input+label:after
+            {
+                margin-top:1em;
+            }
+        }
+    }
 }
