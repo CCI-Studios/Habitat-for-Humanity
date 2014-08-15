@@ -359,6 +359,11 @@
     {
         margin-top:-10px;
     }
+
+    body.not-front .sidebar.first
+    {
+        display: none;
+    }
 }
 
 
@@ -503,11 +508,6 @@
                 float: none;
             }
         }
-    }
-
-    body.not-front .sidebar.first
-    {
-        display: none;
     }
 }
 
