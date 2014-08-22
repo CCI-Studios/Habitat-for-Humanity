@@ -459,8 +459,9 @@ li.last
 
 .welcome h1
 {
-    background:url(../images/wel_icon.png) no-repeat scroll 172px 7px;
-    width:78%;
+    background:url(../images/wel_icon.png) no-repeat scroll right center;
+    display: inline-block;
+    padding-right: 60px;
 }
 
 .page_title
@@ -550,8 +551,9 @@ body.page-our-restore .page_title .text
 
 .video h1
 {
-    background:url(../images/vid_icon.png) no-repeat scroll 210px 10px;
-    width:82%;
+    background:url(../images/vid_icon.png) no-repeat scroll right center;
+    display: inline-block;
+    padding-right: 50px;
 }
 
 .content_cen h1
@@ -616,12 +618,6 @@ body.page-our-restore .page_title .text
     padding:0;
 }
 
-.welcome
-{
-    width:45%!important;
-    padding:0 3% 0 0 !important;
-}
-
 .welcome p,.content_cen p,.video p
 {
     line-height:14px;
@@ -650,11 +646,6 @@ body.page-our-restore .page_title .text
     text-align:left;
     line-height:14px;
     margin:0;
-}
-
-.video
-{
-    width:50%!important;
 }
 
 .wat_new2
