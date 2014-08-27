@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Habitat for Humanity feature.
+ */
+
+include_once 'habitat_for_humanity.features.inc';
