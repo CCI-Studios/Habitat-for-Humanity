@@ -1,0 +1,47 @@
+<?php
+
+function custom_mailchimp_subscribe_webform_submission_insert($node, $submission)
+{
+    if ($node->nid == 52 || $node->nid == 59 || $node->nid == 60)
+    {
+        _custom_mailchimp_subscribe_submit($node, $submission);
+    }
+}
+
+
+function _custom_mailchimp_subscribe_submit($node, $submission)
+{
+    $mapping = _custom_mailchimp_subscribe_webform_component_mapping($node);
+    $email = @$submission->data[$mapping['email']]['value'][0];
+    $consent = @$submission->data[$mapping['consent']]['value'][0];
+
+    if ($consent)
+    {
+        $options = array();
+        // Array keys are matching the key that the remote site accepts. URL encoding will be taken care later.
+        $options['data'] = array(
+            'e' => $email
+        );
+        $options['data'] = http_build_query($options['data']);
+        $options['method'] = 'POST';
+        $url = 'http://csconsent.ccistaging.com/mc/habitat/subscribe.php';
+
+        // Put your additional headers here. Cookie can be set as well.
+        $headers = array('Content-Type' => 'application/x-www-form-urlencoded');
+
+        $options['headers'] = $headers;
+
+        // Submits data to the remote server from the drupal server. User will remain in the Drupal form submission chain.
+        $response = drupal_http_request($url, $options);
+    }
+}
+
+function _custom_mailchimp_subscribe_webform_component_mapping($node) {
+    $mapping = array();
+    $components = $node->webform['components'];
+    foreach ($components as $i => $component) {
+        $key = $component['form_key'];
+        $mapping[$key] = $i;
+    }
+    return $mapping;
+}

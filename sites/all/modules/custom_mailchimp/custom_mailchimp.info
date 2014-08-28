@@ -1,0 +1,6 @@
+name = Custom MailChimp Search
+description = MailChimp search
+core = 7.x
+
+dependencies[] = libraries (>=2)
+dependencies[] = mailchimp

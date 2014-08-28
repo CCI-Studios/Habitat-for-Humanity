@@ -1,0 +1,32 @@
+<?php
+
+/**
+ * Implements hook_menu().
+ */
+function custom_mailchimp_menu() {
+  $items = array();
+
+  $items['admin/mailchimp/search'] = array(
+    'title' => 'MailChimp Search',
+    'description' => 'Manage MailChimp Settings.',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('custom_mailchimp_admin_search'),
+    'access arguments' => array('search mailchimp'),
+    'file' => 'includes/custom_mailchimp.admin.inc',
+    'type' => MENU_NORMAL_ITEM,
+  );
+
+  return $items;
+}
+
+/**
+ * Implements hook_permission().
+ */
+function custom_mailchimp_permission() {
+  return array(
+    'search mailchimp' => array(
+      'title' => t('Search MailChimp'),
+      'description' => t('Access the mailchimp search.'),
+    ),
+  );
+}

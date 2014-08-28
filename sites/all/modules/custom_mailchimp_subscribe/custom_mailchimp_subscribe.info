@@ -1,0 +1,5 @@
+name = Custom MailChimp Subscribe
+description = MailChimp subscribe from webform
+core = 7.x
+
+dependencies[] = webform
