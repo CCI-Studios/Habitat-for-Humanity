@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 /**
  * @file
  * Default theme implementation to display a single Drupal page.
@@ -64,9 +64,7 @@
  * @see template_process()
  */
 ?>
-
 <div class="header">
-
     <div class="inner_width">
         <div class="top">
             <a id="logo" href="<?php print base_path();?>"><img src="<?php print base_path() . drupal_get_path('theme', 'habitat');?>/images/logo.png" alt="Habitat for Humanity - Sarnia Lambton" /></a>
