@@ -15,7 +15,7 @@ function custom_mailchimp_admin_search($form, &$form_state)
   {
     $mcapi = mailchimp_get_api_object();
     $result = $mcapi->helper->searchMembers($form_state['input']['q']);
-    $members = $result['full_search']['members'];
+    $members = array_merge($result['full_search']['members'], $result['exact_matches']['members']);
     $table = array();
     $table['header'] = array('Email address', 'First name', 'Last Name', 'List', 'Status');
     $table['rows'] = array();
