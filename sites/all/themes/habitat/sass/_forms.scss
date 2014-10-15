@@ -106,6 +106,26 @@ input[disabled=disabled], input[disabled=disabled] + label, button[disabled=disa
     {
         content:"8";
     }
+    &.step-9 > span:after
+    {
+        content:"9";
+    }
+    &.step-10 > span:after
+    {
+        content:"10";
+    }
+    &.step-11 > span:after
+    {
+        content:"11";
+    }
+    &.step-12 > span:after
+    {
+        content:"12";
+    }
+    &.step-13 > span:after
+    {
+        content:"13";
+    }
 }
 
 
@@ -141,6 +161,7 @@ form.webform-client-form
     }
 
     .webform-component-textfield,
+    .webform-component-number,
     .webform-component-email
     {
         input
@@ -402,5 +423,76 @@ form.webform-client-form
                 margin-top:1em;
             }
         }
+    }
+}
+
+form#webform-client-form-70
+{
+    & > div > .form-item
+    {
+        clear: both;
+    }
+    
+    .form-radios,
+    .form-checkboxes
+    {
+        & > .form-item
+        {
+            float: left;
+            margin:0 1em 0.5em 0;
+            
+            & > label
+            {
+                padding-right: 0;
+                padding-left: 30px;
+                
+                &:after
+                {
+                    right:auto;
+                    left: 0;
+                }
+            }
+        }
+    }
+    
+    .webform-layout-box.horiz
+    {
+        width: 100%;
+        clear: left;
+        overflow: hidden;
+        
+        .form-item
+        {
+            display: block;
+            
+            label,
+            input
+            {
+                float: left;
+                width: 29%;
+            }
+        }
+    }
+    #webform-component-income-source-headings--main-applicant label
+    {
+        padding-right: 11px;
+    }
+    #webform-component-other-income-layout--please-specify
+    {
+        clear: left;
+    }
+    
+    .button.add-more
+    {
+        border:0;
+        font-size: 14px;
+        padding: 4px 8px;
+    }
+    .button.del-btn
+    {
+        background:#888;
+        border:0;
+        font-size: 14px;
+        padding: 4px 8px;
     }
 }
