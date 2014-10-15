@@ -10,11 +10,11 @@
 
         if (content_height < sidebar_height)
         {
-            $content.height(sidebar_height);
+            $content.css("min-height", sidebar_height+"px");
         }
         else
         {
-            $sidebar.height(content_height);
+            $sidebar.css("min-height", content_height+"px");
         }
     }
 }(jQuery));
