@@ -2,6 +2,12 @@
     var player;
 
     $(function(){
+        var submitted = false;
+        $('form').submit(function() {
+            if (submitted) { return false; }
+            else { submitted = true;}
+        });
+        
         var $container = $("#webform-component-what-kind-of-build-site-volunteer-activities-are-you-interested-in");
 
         $container.find(".form-item-submitted-what-kind-of-build-site-volunteer-activities-are-you-interested-in-cashier label")
