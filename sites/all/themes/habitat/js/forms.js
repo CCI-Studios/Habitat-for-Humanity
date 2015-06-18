@@ -26,6 +26,7 @@
         .append("<div class='description'>Assists with administrative duties. Admin tasks require short-term volunteer assistance at various points in the year.</div>");
 
         youtubeSetup();
+        fixEnterButton();
     });
 
     function youtubeSetup()
@@ -58,6 +59,15 @@
         }
     }
     
+    function fixEnterButton()
+    {
+        $("form .webform-steps-wrapper").parents("form").find("input, select").on("keypress", function(e){
+            if (e.keyCode == 13)
+            {
+                $("#edit-next").trigger("click");
+                return false;
+            }
+        });
     }
 }(jQuery));
 
