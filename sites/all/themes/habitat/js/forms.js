@@ -51,7 +51,13 @@
 
     function disableNextStep()
     {
-        $("#edit-submitted-i-confirm-that-i-have-watched-this-video-in-its-entirety input, #edit-submitted-i-confirm-that-i-have-watched-this-video-in-its-entirety-2 input, #edit-submitted-i-confirm-i-have-watched-this-video-in-its-entirety input, #edit-next").attr("disabled","true");
+        var toDisable = $("#edit-submitted-i-confirm-that-i-have-watched-this-video-in-its-entirety input, #edit-submitted-i-confirm-that-i-have-watched-this-video-in-its-entirety-2 input, #edit-submitted-i-confirm-i-have-watched-this-video-in-its-entirety input, #edit-next");
+        if (!toDisable.is(":checked"))
+        {
+            toDisable.attr("disabled","true")
+        }
+    }
+    
     }
 }(jQuery));
 
