@@ -141,6 +141,7 @@
                 </ul>
                 <p style="font-size:25px; float:left;"> (519) 339-7957</p>
                 <br clear="all"/>
+                <p style="font-size:11px;">Charitable Registration Number 13936-1638-RR0001</p>
                 <p style="font-size:11px;"><a class="cci_studios" target="_blank" href="http://www.ccistudios.com/">Site by CCI Studios</a></p>
             </div>
 
