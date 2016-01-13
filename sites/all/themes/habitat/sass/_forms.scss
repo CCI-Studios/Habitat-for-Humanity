@@ -4,133 +4,48 @@ input[disabled=disabled], input[disabled=disabled] + label, button[disabled=disa
     cursor:not-allowed!important;
 }
 
-.webform-steps-wrapper
+.webform-progressbar-outer
 {
-    overflow: hidden;
+    height: 1px;
+    background: #a1a1a1;
+    margin: 20px 0;
+    border: 0;
 }
-.webform-step
+.webform-progressbar-inner
 {
-    position: relative;
-    display: block;
-    color:transparent;
-    font-size: 0;
-    float: left;
+    display: none;
+}
+.webform-progressbar-page
+{
+    border: 0;
+    margin: -16px 0 0 -12px;
+    background: #a1a1a1;
+    width: 32px;
+    height: 32px;
+    border-radius: 100%;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 32px;
+    text-align: center;
+    cursor:not-allowed;
 
-    input
+    .webform-progressbar-page-number
     {
-        opacity:0;
         display: block;
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 32px;
-        height: 32px;
-        z-index: 1;
+    }
+    &.current,
+    &.completed
+    {
         cursor: pointer;
-        border:0;
-    }
-    &.disabled input
-    {
-        cursor:not-allowed;
-    }
-
-    &:before
-    {
-        display: block;
-        content:"";
-        height:1px;
-        background:$green;
-        width: 75px;
-        margin: 15px 7px;
-        float: left;
-    }
-    & > span
-    {
-        position: relative;
-        background:$green;
-        width: 32px;
-        height: 32px;
-        display: block;
-        border-radius:16px;
-        float: left;
-
-        &:after
-        {
-            @extend .clearface;
-            display: block;
-            font-size:24px;
-            color:white;
-            width: 32px;
-            text-align: center;
-            line-height: 32px;
-        }
-    }
-    &.disabled > span,
-    &.disabled:before
-    {
-        background:#a1a1a1;
-    }
-    &.first:before
-    {
-        display: none;
-    }
-    &.step-1 > span:after
-    {
-        content:"1";
-    }
-    &.step-2 > span:after
-    {
-        content:"2";
-    }
-    &.step-3 > span:after
-    {
-        content:"3";
-    }
-    &.step-4 > span:after
-    {
-        content:"4";
-    }
-    &.step-5 > span:after
-    {
-        content:"5";
-    }
-    &.step-6 > span:after
-    {
-        content:"6";
-    }
-    &.step-7 > span:after
-    {
-        content:"7";
-    }
-    &.step-8 > span:after
-    {
-        content:"8";
-    }
-    &.step-9 > span:after
-    {
-        content:"9";
-    }
-    &.step-10 > span:after
-    {
-        content:"10";
-    }
-    &.step-11 > span:after
-    {
-        content:"11";
-    }
-    &.step-12 > span:after
-    {
-        content:"12";
-    }
-    &.step-13 > span:after
-    {
-        content:"13";
+        background: #54b848;
     }
 }
 
 
 #edit-next,
-#edit-submit
+#edit-submit,
+.webform-client-form .form-submit
 {
     @extend .clearface;
     display: inline-block;
@@ -143,7 +58,8 @@ input[disabled=disabled], input[disabled=disabled] + label, button[disabled=disa
     cursor: pointer;
     margin-right: 5px;
 }
-#edit-previous
+#edit-previous,
+.webform-client-form .webform-previous
 {
     display: none;
 }
@@ -201,10 +117,10 @@ form.webform-client-form
         margin:0.75em 0;
     }
 
-    #webform-component-first-name,
-    #webform-component-gender,
-    #webform-component-city,
-    #webform-component-employer
+    .webform-component--first-name,
+    .webform-component--gender,
+    .webform-component--city,
+    .webform-component--employer
     {
         float: left;
         margin-right: 20px;
@@ -212,11 +128,11 @@ form.webform-client-form
         clear: none;
     }
 
-    #webform-component-address,
-    #webform-component-phone-number,
-    #webform-component-team-name,
-    #webform-component-are-you-volunteering-for-required-community-service-hours,
-    #webform-component-we-know-that-sometimes-our-volunteers-are-interested-in-helping-habitat-with-more-than-just-restore-please-select-any-other-area
+    .webform-component--address,
+    .webform-component--phone-number,
+    .webform-component--team-name,
+    .webform-component--are-you-volunteering-for-required-community-service-hours,
+    .webform-component--we-know-that-sometimes-our-volunteers-are-interested-in-helping-habitat-with-more-than-just-restore-please-select-any-other-area
     {
         clear: both;
     }
@@ -279,9 +195,9 @@ form.webform-client-form
 		}
 	}
 
-    #webform-component-do-you-have-any-health-issues-we-should-be-aware-of,
-    #webform-component-are-you-volunteering-for-high-school-community-service-hours,
-    #webform-component-are-you-volunteering-for-required-community-service-hours
+    .webform-component--do-you-have-any-health-issues-we-should-be-aware-of,
+    .webform-component--are-you-volunteering-for-high-school-community-service-hours,
+    .webform-component--are-you-volunteering-for-required-community-service-hours
     {
         & > label
         {
@@ -295,7 +211,7 @@ form.webform-client-form
             margin-right: 20px;
         }
     }
-    #webform-component-if-yes-please-describe
+    .webform-component--if-yes-please-describe
     {
         & > label
         {
@@ -309,7 +225,7 @@ form.webform-client-form
             width: 220px;
         }
     }
-    #webform-component-what-kind-of-build-site-volunteer-activities-are-you-interested-in
+    .webform-component--what-kind-of-build-site-volunteer-activities-are-you-interested-in
     {
         position: relative;
 
@@ -342,13 +258,13 @@ form.webform-client-form
             width: 220px;
         }
     }
-    #webform-component-sunday,
-    #webform-component-monday,
-    #webform-component-tuesday,
-    #webform-component-wednesday,
-    #webform-component-thursday,
-    #webform-component-friday,
-    #webform-component-saturday
+    .webform-component--sunday,
+    .webform-component--monday,
+    .webform-component--tuesday,
+    .webform-component--wednesday,
+    .webform-component--thursday,
+    .webform-component--friday,
+    .webform-component--saturday
     {
         & > label
         {
@@ -364,8 +280,8 @@ form.webform-client-form
             margin-top: 0;
         }
     }
-    #webform-component-we-know-that-sometimes-our-volunteers-are-interested-in-helping-habitat-with-more-than-just-restore-please-select-any-other-area,
-    #webform-component-we-know-that-sometimes-our-volunteers-are-interested-in-helping-habitat-with-more-than-just-restore
+    .webform-component--we-know-that-sometimes-our-volunteers-are-interested-in-helping-habitat-with-more-than-just-restore-please-select-any-other-area,
+    .webform-component--we-know-that-sometimes-our-volunteers-are-interested-in-helping-habitat-with-more-than-just-restore
     {
         .form-item
         {
@@ -374,15 +290,15 @@ form.webform-client-form
             margin-top: 0;
         }
     }
-    #webform-component-i-confirm-that-i-have-watched-this-video-in-its-entirety,
-    #webform-component-i-confirm-i-have-watched-this-video-in-its-entirety,
-    #webform-component-i-confirm-that-i-have-watched-this-video-in-its-entirety-2,
-    #webform-component-i-have-read-and-understand-the-site-safety-guidelines,
-    #webform-component-i-have-read-the-above-and-understand-habitat-for-humanity-sarnia-lambtons-volunteer-guidelines,
-    #edit-submitted-i-have-read-the-above-and-understand-habitat-for-humanity-sarnia-lambtons-volunteer-guidelines-and-code-of-conduct,
-    #webform-component-i-confirm-that-i-have-read-the-habitat-for-humanity-health--safety-policy,
-    #webform-component-i-have-thoroughly-read-understand-and-agree-with-the-information-and-terms-of-this-release-waiver--indemnity,
-    #webform-component-consent
+    .webform-component--i-confirm-that-i-have-watched-this-video-in-its-entirety,
+    .webform-component--i-confirm-i-have-watched-this-video-in-its-entirety,
+    .webform-component--i-confirm-that-i-have-watched-this-video-in-its-entirety-2,
+    .webform-component--i-have-read-and-understand-the-site-safety-guidelines,
+    .webform-component--i-have-read-the-above-and-understand-habitat-for-humanity-sarnia-lambtons-volunteer-guidelines,
+    .edit-submitted--i-have-read-the-above-and-understand-habitat-for-humanity-sarnia-lambtons-volunteer-guidelines-and-code-of-conduct,
+    .webform-component--i-confirm-that-i-have-read-the-habitat-for-humanity-health--safety-policy,
+    .webform-component--i-have-thoroughly-read-understand-and-agree-with-the-information-and-terms-of-this-release-waiver--indemnity,
+    .webform-component--consent
     {
         .form-item
         {
@@ -400,7 +316,7 @@ form.webform-client-form
         }
     }
 
-    #edit-submitted-what-kind-of-build-site-volunteer-activities-are-you-interested-in
+    .edit-submitted--what-kind-of-build-site-volunteer-activities-are-you-interested-in
     {
         .form-item-submitted-what-kind-of-build-site-volunteer-activities-are-you-interested-in-officeadmin,
         .form-item-submitted-what-kind-of-build-site-volunteer-activities-are-you-interested-in-board
@@ -473,11 +389,11 @@ form#webform-client-form-70
             }
         }
     }
-    #webform-component-income-source-headings--main-applicant label
+    .webform-component--income-source-headings--main-applicant label
     {
         padding-right: 11px;
     }
-    #webform-component-other-income-layout--please-specify
+    .webform-component--other-income-layout--please-specify
     {
         clear: left;
     }

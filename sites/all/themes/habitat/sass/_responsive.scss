@@ -349,13 +349,13 @@
     }
     form.webform-client-form
     {
-        #webform-component-sunday,
-        #webform-component-monday,
-        #webform-component-tuesday,
-        #webform-component-wednesday,
-        #webform-component-thursday,
-        #webform-component-friday,
-        #webform-component-saturday
+        .webform-component--sunday,
+        .webform-component--monday,
+        .webform-component--tuesday,
+        .webform-component--wednesday,
+        .webform-component--thursday,
+        .webform-component--friday,
+        .webform-component--saturday
         {
             & > label
             {
@@ -445,17 +445,17 @@
 {
     form.webform-client-form
     {
-        #webform-component-first-name,
-        #webform-component-gender,
-        #webform-component-city,
-        #webform-component-employer
+        .webform-component--first-name,
+        .webform-component--gender,
+        .webform-component--city,
+        .webform-component--employer
         {
             float: none;
         }
 
-        #webform-component-do-you-have-any-health-issues-we-should-be-aware-of,
-        #webform-component-are-you-volunteering-for-high-school-community-service-hours,
-        #webform-component-are-you-volunteering-for-required-community-service-hours
+        .webform-component--do-you-have-any-health-issues-we-should-be-aware-of,
+        .webform-component--are-you-volunteering-for-high-school-community-service-hours,
+        .webform-component--are-you-volunteering-for-required-community-service-hours
         {
             & > label
             {
@@ -467,7 +467,7 @@
             }
         }
 
-        #webform-component-what-kind-of-build-site-volunteer-activities-are-you-interested-in
+        .webform-component--what-kind-of-build-site-volunteer-activities-are-you-interested-in
         {
             & > label
             {
@@ -488,13 +488,13 @@
             }
         }
 
-        #webform-component-sunday,
-        #webform-component-monday,
-        #webform-component-tuesday,
-        #webform-component-wednesday,
-        #webform-component-thursday,
-        #webform-component-friday,
-        #webform-component-saturday
+        .webform-component--sunday,
+        .webform-component--monday,
+        .webform-component--tuesday,
+        .webform-component--wednesday,
+        .webform-component--thursday,
+        .webform-component--friday,
+        .webform-component--saturday
         {
             & > label
             {
@@ -509,7 +509,7 @@
             }
         }
 
-        #webform-component-we-know-that-sometimes-our-volunteers-are-interested-in-helping-habitat-with-more-than-just-restore-please-select-any-other-area
+        .webform-component--we-know-that-sometimes-our-volunteers-are-interested-in-helping-habitat-with-more-than-just-restore-please-select-any-other-area
         {
             .form-item
             {

@@ -2,15 +2,19 @@
 
 Drupal.behaviors.webform_steps = {};
 Drupal.behaviors.webform_steps.attach = function(context, settings) {
-  $('.webform-steps-wrapper', context).click(function(event) {
-    var $target = $(event.target);
-    if ($target.is('span')) {
-      var $input = $target.find('input');
-      if ($input.is(':enabled')) {
-        $input.click();
-      };
+
+$('.webform-client-form', context).each(function() {
+  var $form = $(this);
+  var $steps = $form.find('.webform-progressbar .webform-progressbar-page');
+  $form.find('.webform-steps-buttons input.step-button').each(function(i) {
+    var $button = $(this);
+    if ($button.is(':enabled')) {
+      $($steps[i]).click(function(event) {
+        $button.click();
+      }).addClass('clickable').css('cursor', 'pointer');
     }
   });
-}
+});
 
+}
 })(jQuery);

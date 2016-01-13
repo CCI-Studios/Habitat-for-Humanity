@@ -119,10 +119,6 @@
                     <?php endif; ?>
                 </div>
             </div>
-            <div style="margin-top:19px; padding:0; background:none !important; border:none !important;" class="sidebar second">
-                <a href="/donate" style="margin:0; line-height:0; display:block;"><img style="max-width:100%; margin:0;" src="/sites/all/themes/habitat/images/don_img1.jpg"></a>
-                <a href="/volunteer" style="margin:0; line-height:0;"><img style="max-width:100%; margin:0;" src="/sites/all/themes/habitat/images/don_img2.jpg"></a>
-            </div>
         <?php } ?>
 
     </div>
