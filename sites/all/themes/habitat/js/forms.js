@@ -52,7 +52,7 @@
 
     function disableNextStep()
     {
-        var toDisable = $("#edit-submitted-i-confirm-that-i-have-watched-this-video-in-its-entirety input, #edit-submitted-i-confirm-that-i-have-watched-this-video-in-its-entirety-2 input, #edit-submitted-i-confirm-i-have-watched-this-video-in-its-entirety input, #edit-next");
+        var toDisable = $("#edit-submitted-i-confirm-that-i-have-watched-this-video-in-its-entirety input, #edit-submitted-i-confirm-that-i-have-watched-this-video-in-its-entirety-2 input, #edit-submitted-i-confirm-i-have-watched-this-video-in-its-entirety input, .form-submit.button-primary");
         if (!toDisable.is(":checked"))
         {
             toDisable.attr("disabled","true")
@@ -64,7 +64,7 @@
         $("form .webform-steps-wrapper").parents("form").find("input, select").on("keypress", function(e){
             if (e.keyCode == 13)
             {
-                $("#edit-next").trigger("click");
+                $(".form-submit.button-primary").trigger("click");
                 return false;
             }
         });
@@ -94,5 +94,5 @@ function onPlayerStateChange(event)
 
 function enableNextStep()
 {
-    jQuery("#edit-submitted-i-confirm-that-i-have-watched-this-video-in-its-entirety input, #edit-submitted-i-confirm-that-i-have-watched-this-video-in-its-entirety-2 input, #edit-submitted-i-confirm-i-have-watched-this-video-in-its-entirety input, #edit-next").prop("disabled","");
+    jQuery("#edit-submitted-i-confirm-that-i-have-watched-this-video-in-its-entirety input, #edit-submitted-i-confirm-that-i-have-watched-this-video-in-its-entirety-2 input, #edit-submitted-i-confirm-i-have-watched-this-video-in-its-entirety input, .form-submit.button-primary").prop("disabled","");
 }
