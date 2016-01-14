@@ -1,0 +1,13 @@
+name = Webform Options Markup Component
+description = Webform component to insert markup into checkbox and radio options.
+core = 7.x
+package = Webform
+dependencies[] = webform
+files[] = webform_optionsmarkup.inc
+
+; Information added by drupal.org packaging script on 2013-10-27
+version = "7.x-2.0-alpha1"
+core = "7.x"
+project = "webform_optionsmarkup"
+datestamp = "1382837128"
+
