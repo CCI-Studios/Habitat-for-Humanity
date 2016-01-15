@@ -111,12 +111,10 @@
         </div>
 
 
-        <?php if ($is_front) { ?>
+        <?php if ($is_front && $page['footer_first']) { ?>
             <div class="content_btm">
                 <div class="fea_val">
-                    <?php if ($page['footer_first']): ?>
-                        <?php print render($page['footer_first']); ?>
-                    <?php endif; ?>
+                    <?php print render($page['footer_first']); ?>
                 </div>
             </div>
         <?php } ?>
@@ -145,10 +143,12 @@
             	<ul>
                 	<li><a href="<?php print base_path();?>"><span>Home</span></a>
                 	<li><a href="/about"><span>About</span></a>
-                	<li><a href="/volunteer"><span>Volunteer<span></a>
+                	<li><a href="/volunteer"><span>Volunteer</span></a>
                 	<li><a href="/volunteer/restore">Restore</a>
                 	<li><a href="/volunteer/builds">Builds</a>
+                	<li><a href="/volunteer/lambtonbuilds">Lambton Builds</a>
                 	<li><a href="/volunteer/our-affiliate">Our Affiliate</a>
+                	<li><a href="/habitat-handyman"><span>Habitat Handyman</span></a>
                 </ul>
 
                 <ul>

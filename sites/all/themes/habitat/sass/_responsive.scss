@@ -46,7 +46,26 @@
     .f_center
     {
         float: none;
-        margin:0 auto;
+        width: auto;
+        text-align: center;
+        margin-bottom: 1em;
+        
+        ul
+        {
+            float: none;
+            display: inline-block;
+            vertical-align: top;
+        }
+        li
+        {
+            text-align: left;
+            
+            a, a span
+            {
+                float: none;
+                display: block;
+            }
+        }
     }
     .footer .f_right
     {
@@ -544,14 +563,17 @@
     }
     .footer ul
     {
-        float: none;
+        display: block;
         margin: 0;
         padding: 0;
         text-align: center;
-
+        
+        li
+        {
+            text-align: center;
+        }
         li a, li a span
         {
-            float: none;
             display: block;
         }
         li a span span
