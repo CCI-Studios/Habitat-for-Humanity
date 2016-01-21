@@ -146,7 +146,7 @@
                 	<li><a href="/volunteer"><span>Volunteer</span></a>
                 	<li><a href="/volunteer/restore">Restore</a>
                 	<li><a href="/volunteer/builds">Builds</a>
-                	<li><a href="/volunteer/lambtonbuilds">Lambton Builds</a>
+                	<li><a href="/volunteer/lambtonbuilds/apply">Lambton Builds</a>
                 	<li><a href="/volunteer/our-affiliate">Our Affiliate</a>
                 	<li><a href="/habitat-handyman"><span>Habitat Handyman</span></a>
                 </ul>
