@@ -282,6 +282,11 @@ img
     border-top:2px solid $green;
     border-bottom:2px solid $green;
     position: relative;
+    
+    .inner_width
+    {
+      max-width: 970px;
+    }
 }
 
 #block-system-main-menu .content li
