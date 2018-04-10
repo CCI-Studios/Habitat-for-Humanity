@@ -1364,6 +1364,13 @@ form#webform-client-form-70 .button.del-btn {
   font-size: 14px;
   padding: 4px 8px; }
 
+.layout-checkbox-items .form-radios label {
+  padding: 0 0 0 30px;
+  display: block; }
+  .layout-checkbox-items .form-radios label:after {
+    right: auto;
+    left: 0; }
+
 @media screen and (max-width: 955px) {
   .content_main,
   .content_top,

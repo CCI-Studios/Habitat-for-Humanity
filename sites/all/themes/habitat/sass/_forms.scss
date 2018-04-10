@@ -414,3 +414,21 @@ form#webform-client-form-70
         padding: 4px 8px;
     }
 }
+
+.layout-checkbox-items
+{
+    .form-radios
+    {
+        label
+        {
+            padding:0 0 0 30px;
+            display: block;
+
+            &:after
+            {
+                right: auto;
+                left: 0;
+            }
+        }
+    }
+}
